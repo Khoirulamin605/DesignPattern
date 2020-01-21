@@ -31,4 +31,35 @@ class Store
         return $this->category;
     }
 
+    public function setName($name)
+    {
+        $this->name = $name;
+        return $this;
+    }
+    public function setCity($city)
+    {
+        $this->city = $city;
+        return $this;
+    }
+    public function setCountry($country)
+    {
+        $this->country = $country;
+        return $this;
+    }
+    public function setCategory($category)
+    {
+        $this->category = $category;
+        return $this;
+    }
+
+    public function clone() : Store
+    {
+        return new Store(
+            $this->name,
+            $this->city,
+            $this->country,
+            $this->category
+        );
+    }
+
 }

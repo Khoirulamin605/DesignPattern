@@ -4,7 +4,9 @@
 include("Store.php");
 
 $store = new Store("Toko1", "Jakarta", "Indonesia", "Butik"); 
-$store1 = new Store("Toko2", $store->getCity(), $store->getCountry(), "Butik"); 
+$store1 = $store->clone();
+$store1->setName("Oke");
+$store1->setCity("lamongan");
 
 
 print_r($store);
